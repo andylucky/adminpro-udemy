@@ -7,6 +7,9 @@ import { LoginComponent } from './login/login.component';
 import { PagesRegister2Component } from './pages-register2/pages-register2.component';
 import { PagesModule } from './pages/pages.module';
 
+import { FormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -14,11 +17,14 @@ import { PagesModule } from './pages/pages.module';
     AppComponent,
     LoginComponent,
     PagesRegister2Component
+
+
   ],
   imports: [
     BrowserModule,
     PagesModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

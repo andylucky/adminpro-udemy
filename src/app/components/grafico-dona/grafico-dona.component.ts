@@ -1,12 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 @Component({
-  selector: 'app-graficas1',
-  templateUrl: './graficas1.component.html',
-  styles: []
+  selector: 'app-grafico-dona',
+  templateUrl: './grafico-dona.component.html',
+  styleUrls: ['./grafico-dona.component.css']
 })
-export class Graficas1Component implements OnInit {
+export class GraficoDonaComponent implements OnInit {
+
+  @Input('ChartLabels') doughnutChartLabels: string[] = [];
+  @Input('ChartData') doughnutChartData: number[] = []
+  @Input('ChartType') doughnutChartType: string = 'doughnut';
+  
+
 
   graficos: any = {
     'grafico1': {
@@ -35,7 +41,7 @@ export class Graficas1Component implements OnInit {
     },
   };
 
- 
+  
   constructor() { }
 
   ngOnInit() {
